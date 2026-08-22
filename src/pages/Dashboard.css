@@ -1,0 +1,263 @@
+.dashboard-root {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.dashboard-subtitle {
+  color: #9aa0a6;
+  margin-bottom: 20px;
+}
+
+.dashboard-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.search-input,
+.sort-select {
+  background: #1a1d24;
+  border: 1px solid #2a2e37;
+  color: #e8eaed;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.stats-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.stat-box {
+  background: linear-gradient(135deg, #1a1d24, #20242d);
+  border: 1px solid #2a2e37;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #7dd3fc;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #9aa0a6;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 28px;
+}
+
+.dashboard-sidebar {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+}
+
+.sidebar-heading {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #9aa0a6;
+  letter-spacing: 0.06em;
+  margin: 18px 0 8px;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-btn {
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: #c7cad1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.sidebar-btn:hover {
+  background: #1a1d24;
+}
+
+.sidebar-btn.active {
+  background: #2563eb33;
+  color: #7dd3fc;
+}
+
+.sidebar-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag-chip {
+  background: #1a1d24;
+  border: 1px solid #2a2e37;
+  color: #c7cad1;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.tag-chip.active {
+  background: #2563eb33;
+  border-color: #2563eb;
+  color: #7dd3fc;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.product-card {
+  background: #1a1d24;
+  border: 1px solid #2a2e37;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+.product-card-icon {
+  color: #7dd3fc;
+  flex-shrink: 0;
+}
+
+.product-card-title {
+  margin: 0 0 2px;
+  font-size: 1rem;
+}
+
+.product-card-category {
+  color: #9aa0a6;
+  font-size: 0.78rem;
+  margin: 0 0 8px;
+}
+
+.product-card-desc {
+  font-size: 0.82rem;
+  color: #c7cad1;
+  line-height: 1.4;
+  margin: 0 0 10px;
+}
+
+.product-card-tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.product-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.product-card-price {
+  font-weight: 700;
+  color: #7dd3fc;
+}
+
+.product-card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: #7a808a;
+}
+
+.star-rating .star-full {
+  color: #facc15;
+}
+
+.star-rating .star-half {
+  color: #facc15;
+  opacity: 0.5;
+}
+
+.star-rating .star-empty {
+  color: #3a3f4a;
+}
+
+.empty-state {
+  text-align: center;
+  color: #9aa0a6;
+  padding: 60px 0;
+}
+
+.pagination {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  background: #1a1d24;
+  border: 1px solid #2a2e37;
+  color: #c7cad1;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pagination-gap {
+  padding: 6px 4px;
+  color: #7a808a;
+}
+
+@media (max-width: 800px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-sidebar {
+    position: static;
+  }
+}
